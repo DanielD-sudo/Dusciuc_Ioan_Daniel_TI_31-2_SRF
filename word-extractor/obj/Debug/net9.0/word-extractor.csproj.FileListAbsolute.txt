@@ -1,0 +1,15 @@
+/Users/dani/Desktop/Proiect-Sisteme_recunoastere_forme/Dusciuc_Ioan_Daniel_TI_31-2_SRF/word-extractor/obj/Debug/net9.0/word-extractor.GeneratedMSBuildEditorConfig.editorconfig
+/Users/dani/Desktop/Proiect-Sisteme_recunoastere_forme/Dusciuc_Ioan_Daniel_TI_31-2_SRF/word-extractor/obj/Debug/net9.0/word-extractor.AssemblyInfoInputs.cache
+/Users/dani/Desktop/Proiect-Sisteme_recunoastere_forme/Dusciuc_Ioan_Daniel_TI_31-2_SRF/word-extractor/obj/Debug/net9.0/word-extractor.AssemblyInfo.cs
+/Users/dani/Desktop/Proiect-Sisteme_recunoastere_forme/Dusciuc_Ioan_Daniel_TI_31-2_SRF/word-extractor/obj/Debug/net9.0/word-extractor.csproj.CoreCompileInputs.cache
+/Users/dani/Desktop/Proiect-Sisteme_recunoastere_forme/Dusciuc_Ioan_Daniel_TI_31-2_SRF/word-extractor/obj/Debug/net9.0/word-extractor.sourcelink.json
+/Users/dani/Desktop/Proiect-Sisteme_recunoastere_forme/Dusciuc_Ioan_Daniel_TI_31-2_SRF/word-extractor/bin/Debug/net9.0/word-extractor
+/Users/dani/Desktop/Proiect-Sisteme_recunoastere_forme/Dusciuc_Ioan_Daniel_TI_31-2_SRF/word-extractor/bin/Debug/net9.0/word-extractor.deps.json
+/Users/dani/Desktop/Proiect-Sisteme_recunoastere_forme/Dusciuc_Ioan_Daniel_TI_31-2_SRF/word-extractor/bin/Debug/net9.0/word-extractor.runtimeconfig.json
+/Users/dani/Desktop/Proiect-Sisteme_recunoastere_forme/Dusciuc_Ioan_Daniel_TI_31-2_SRF/word-extractor/bin/Debug/net9.0/word-extractor.dll
+/Users/dani/Desktop/Proiect-Sisteme_recunoastere_forme/Dusciuc_Ioan_Daniel_TI_31-2_SRF/word-extractor/bin/Debug/net9.0/word-extractor.pdb
+/Users/dani/Desktop/Proiect-Sisteme_recunoastere_forme/Dusciuc_Ioan_Daniel_TI_31-2_SRF/word-extractor/obj/Debug/net9.0/word-extractor.dll
+/Users/dani/Desktop/Proiect-Sisteme_recunoastere_forme/Dusciuc_Ioan_Daniel_TI_31-2_SRF/word-extractor/obj/Debug/net9.0/refint/word-extractor.dll
+/Users/dani/Desktop/Proiect-Sisteme_recunoastere_forme/Dusciuc_Ioan_Daniel_TI_31-2_SRF/word-extractor/obj/Debug/net9.0/word-extractor.pdb
+/Users/dani/Desktop/Proiect-Sisteme_recunoastere_forme/Dusciuc_Ioan_Daniel_TI_31-2_SRF/word-extractor/obj/Debug/net9.0/word-extractor.genruntimeconfig.cache
+/Users/dani/Desktop/Proiect-Sisteme_recunoastere_forme/Dusciuc_Ioan_Daniel_TI_31-2_SRF/word-extractor/obj/Debug/net9.0/ref/word-extractor.dll
