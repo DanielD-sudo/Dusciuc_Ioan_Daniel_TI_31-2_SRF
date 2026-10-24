@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("word-extractor")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ce88d19bf78e35464e42537d9ea004099b84f46e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+780a52bf0e62ac2e7aca28454ffff21dd7b41eef")]
 [assembly: System.Reflection.AssemblyProductAttribute("word-extractor")]
 [assembly: System.Reflection.AssemblyTitleAttribute("word-extractor")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
