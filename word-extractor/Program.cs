@@ -26,8 +26,22 @@ namespace WordFrequency
         {
             string filesFolderPath = FindFilesRootFolder();
             string stopWordsFilePath = FindStopWordsFile();
+            int viewMode = 0;
 
             if(stopWordsFilePath == "null") return 0;
+
+            Console.WriteLine("Choose viewing mode: ");
+            Console.WriteLine("1 - Number Display");
+            Console.WriteLine("2 - Word Display");
+
+            viewMode = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine();
+            if(viewMode != 1 && viewMode != 2) return 0;
+
+            Console.WriteLine();
+            Console.WriteLine("Working on it...");
+            Console.WriteLine();
 
             LoadStopWords(stopWordsFilePath);
 
@@ -47,25 +61,12 @@ namespace WordFrequency
 
             BuildFileVectors();
 
-            for (int i = 0; i < filePaths.Count; i++)
-            {
-                Console.WriteLine("File: " + filePaths[i]);
-                Console.Write("Vector: { ");
+            OrderInAscendingIndex();
 
-                for (int j = 0; j < fileVectors[i].Count; j += 2)
-                {
-                    Console.Write(globalVector[fileVectors[i][j]] + " " + fileVectors[i][j+1]);
-                    if (j < fileVectors[i].Count - 2)
-                    {
-                        Console.Write(", ");
-                    }
-                }
+            if(viewMode == 1) NumberView();
+            else WordView();
 
-                Console.WriteLine(" }");
-                Console.WriteLine();
-            }
-
-            Console.WriteLine("Total files: " + totalFiles);
+            Console.WriteLine("Total files: " + (totalFiles - 1));
             Console.WriteLine("Total different words: " + totalDifferentWords);
 
             return 0;
@@ -630,6 +631,66 @@ namespace WordFrequency
         private static void ReplaceEnd(string s)
         {
             if (MeasureConsontantSequence() > 0) SetEnd(s);
+        }
+
+        private static void OrderInAscendingIndex()
+        {
+            foreach (List<int> fileList in fileVectors)
+            {
+                for(int i = 0; i < fileList.Count() - 2; i += 2)
+                {
+                    for(int j = 0; j < fileList.Count() - 2; j += 2)
+                    {
+                        if(fileList[j] > fileList[j + 2])
+                        {
+                            int temp = fileList[j];
+                            fileList[j] = fileList[j + 2];
+                            fileList[j + 2] = temp;
+                        }
+                    }
+                }
+            }
+        }
+
+        private static void NumberView()
+        {
+            for (int i = 0; i < filePaths.Count; i++)
+            {
+                Console.Write("D" + i + " # ");
+
+                for (int j = 0; j < fileVectors[i].Count; j += 2)
+                {
+                    Console.Write(fileVectors[i][j] + ":" + fileVectors[i][j+1]);
+                    if (j < fileVectors[i].Count - 2)
+                    {
+                        Console.Write(" ");
+                    }
+                }
+
+                Console.WriteLine();
+                Console.WriteLine();
+            }
+        }
+
+        private static void WordView()
+        {
+             for (int i = 0; i < filePaths.Count; i++)
+            {
+                Console.WriteLine("File: " + filePaths[i]);
+                Console.Write("Vector: { ");
+
+                for (int j = 0; j < fileVectors[i].Count; j += 2)
+                {
+                    Console.Write(globalVector[fileVectors[i][j]] + " " + fileVectors[i][j+1]);
+                    if (j < fileVectors[i].Count - 2)
+                    {
+                        Console.Write(", ");
+                    }
+                }
+
+                Console.WriteLine(" }");
+                Console.WriteLine();
+            }
         }
     }
 }
