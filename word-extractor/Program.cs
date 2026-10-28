@@ -27,8 +27,18 @@ namespace WordFrequency
             string filesFolderPath = FindFilesRootFolder();
             string stopWordsFilePath = FindStopWordsFile();
             int viewMode = 0;
+            int orderMode = 0;
 
             if(stopWordsFilePath == "null") return 0;
+
+            Console.WriteLine("Choose order mode: ");
+            Console.WriteLine("1 - By Word Index");
+            Console.WriteLine("2 - By Most Used Word");
+
+            orderMode = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine();
+            if(orderMode != 1 && orderMode != 2) return 0;
 
             Console.WriteLine("Choose viewing mode: ");
             Console.WriteLine("1 - Number Display");
@@ -61,7 +71,8 @@ namespace WordFrequency
 
             BuildFileVectors();
 
-            OrderInAscendingIndex();
+            if(orderMode == 1) OrderInAscendingIndex();
+            else OrderFromMostUsedWord();
 
             if(viewMode == 1) NumberView();
             else WordView();
@@ -642,6 +653,25 @@ namespace WordFrequency
                     for(int j = 0; j < fileList.Count() - 2; j += 2)
                     {
                         if(fileList[j] > fileList[j + 2])
+                        {
+                            int temp = fileList[j];
+                            fileList[j] = fileList[j + 2];
+                            fileList[j + 2] = temp;
+                        }
+                    }
+                }
+            }
+        }
+
+        private static void OrderFromMostUsedWord()
+        {
+            foreach (List<int> fileList in fileVectors)
+            {
+                for(int i = 1; i < fileList.Count() - 1; i += 2)
+                {
+                    for(int j = 1; j < fileList.Count() - 1; j += 2)
+                    {
+                        if(fileList[j] < fileList[j + 2])
                         {
                             int temp = fileList[j];
                             fileList[j] = fileList[j + 2];
